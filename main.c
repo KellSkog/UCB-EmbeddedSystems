@@ -1,6 +1,5 @@
 #include "stats.h"
-#include <stdio.h>
-#include "stats.h"
+//#include <stdio.h>
 
 /* Size of the Data Set */
 #define SIZE (40)
@@ -15,5 +14,5 @@ void main() {
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
-
+  print_array(test, SIZE);
 }

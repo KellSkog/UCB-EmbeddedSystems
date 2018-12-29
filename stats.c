@@ -18,9 +18,17 @@
  * @date <Add date >
  *
  */
-
+#include <stdio.h>
 
 
 
 
 /* Add other Implementation File Code Here */
+
+void print_array(unsigned char * array, int len) {
+	int lastCharIndex = len -1, i = 0;
+	for(; i < lastCharIndex; i++) {
+		printf("%x, ", array[i]);
+	}
+	printf("%x\n", array[i]);
+}
