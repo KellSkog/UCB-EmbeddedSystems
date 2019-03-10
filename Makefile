@@ -1,8 +1,18 @@
-main.out: main.o stats.o
-	gcc $^ -o $@
+SRCS = main.c stats.c
+OBJS := $(SRCS:.c=.o)
+CC = gcc
+
+.PHONY: all
+all: main.out
+
+main.out: $(OBJS)
+	$(CC) -o $@ $^
+
 test.out: test.o stats.o
-	gcc $^ -o $@
-$@.o: $@.c $@.h
-	gcc -c $<
+	$(CC) $^ -o $@
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
 clean:
-	-rm -rf *.out *.o
+	-@rm -f *.out *.o *.i *.s

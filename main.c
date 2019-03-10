@@ -2,7 +2,7 @@
 //#include <stdio.h>
 
 /* Size of the Data Set */
-#define SIZE (40)
+#define SIZE 40
 
 void main() {
 
